@@ -1,5 +1,5 @@
-# :books: ServiceOrientedComputingProject
-> 2020 서비스지향컴퓨팅실습 팀 프로젝트
+# :musical_note: Music Cloud
+> 감정에 따른 음악 추천 서비스
 
 ## :family_man_boy_boy: Contributor
 - 이동욱

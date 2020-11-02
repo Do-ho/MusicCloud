@@ -1,5 +1,4 @@
-# :musical_note: Music Cloud
-> 감정에 따른 음악 추천 서비스
+![logo](https://user-images.githubusercontent.com/33643752/97843021-ece28700-1d2b-11eb-934b-1668d4c9b862.png)
 
 ## :family_man_boy_boy: Contributor
 - 이동욱

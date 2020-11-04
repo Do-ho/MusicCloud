@@ -275,3 +275,5 @@ yarn.lock
 *.png
 *.mp3
 /server/config
+
+*/.vscode

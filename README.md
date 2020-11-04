@@ -4,3 +4,7 @@
 - 이동욱
 - 김도호
 - 김의현
+
+
+
+### 자세한 내용은 [Wiki](https://github.com/Do-ho/MusicCloud)로 :airplane:

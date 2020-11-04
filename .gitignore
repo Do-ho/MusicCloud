@@ -271,3 +271,7 @@ dist
 
 package-lock.json
 yarn.lock
+*.jpg
+*.png
+*.mp3
+/server/config

@@ -2,5 +2,6 @@ import { Header } from './Header';
 import { Introduce } from './Introduce';
 import { Footer } from "./Footer";
 import { MainContainer } from "./MainContainer";
+import { SubContainer } from "./SubContainer";
 
-export { Header, Introduce, Footer, MainContainer };
+export { Header, Introduce, Footer, MainContainer, SubContainer };

@@ -4,10 +4,12 @@ import Logo from '../imgs/logo.png';
 import { Link } from 'react-router-dom';
 
 const HeaderContainer = styled.div`
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100%;
     height: 7rem;
+    background-color: white;
 `;
 
 const LinkContainer = styled.div`

@@ -1,12 +1,6 @@
 import React from 'react';
-import { Introduce, MainContainer, SubContainer } from '../components';
+import { Introduce, MainContainer, SubContainer, TitleText } from '../components';
 import styled from 'styled-components';
-
-const TitleText = styled.p`
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: rgb(51, 63, 80);
-`;
 
 const DescriptionText = styled.p`
     font-size: 1.3rem;

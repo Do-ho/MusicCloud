@@ -37,9 +37,11 @@ const Tbody = styled.tr`
     height: 2rem;
 `;
 
-const APIText = styled.div`
+const APIText = styled.p`
+    display:inline-block;
     background-color: rgb(249, 242, 244);
     color: rgb(204, 133, 171);
+    margin: 0;
 `;
 
 const Doc = () => {

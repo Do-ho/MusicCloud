@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Introduce } from '../components';
+import { Introduce, MainContainer } from '../components';
 import MainImage2 from '../imgs/ppt/슬라이드2.PNG';
 import MainImage3 from '../imgs/ppt/슬라이드3.PNG';
 import MainImage4 from '../imgs/ppt/슬라이드4.PNG';
@@ -10,15 +10,6 @@ import MainImage7 from '../imgs/ppt/슬라이드7.PNG';
 import MainImage8 from '../imgs/ppt/슬라이드8.PNG';
 import MainImage9 from '../imgs/ppt/슬라이드9.PNG';
 import MainImage10 from '../imgs/ppt/슬라이드16.PNG';
-
-const MainContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-`;
 
 const Img = styled.img`
     width: 70rem;

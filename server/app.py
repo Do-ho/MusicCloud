@@ -26,6 +26,7 @@ def home():
 def testApi():
     ID = "*" # 인증 정보의 Client ID
     Secret = "*" # 인증 정보의 Client Secret
+    Key = "*" # ADAMS API KEY
 
     # CSR (음성 인식 API 사용 코드)
     csrdata = open("./static/voice/test.mp3", "rb") # STT를 진행하고자 하는 음성 파일
@@ -56,17 +57,29 @@ def testApi():
     cfrresponse = requests.post(cfrURL,  files=cfrdata, headers=cfrheaders)
     cfrrescode = cfrresponse.status_code
 
-    #json 파싱
+    #json 파싱 (cfr)
     jsonObject = json.loads(cfrresponse.text)
     jsonArray = jsonObject.get("faces")
+
+    # text -> 감정 분석 (adams api)
+    adamsURL = "http://api.adams.ai/datamixiApi/omAnalysis?" + "key=" + Key + "&query=" + csrresponse.text + "&type=0"
+    adamsresponse = requests.post(adamsURL)
+    adamsrescode = adamsresponse.status_code
+
+    #json 파싱 (adams)
+    jsonObject2 = json.loads(adamsresponse.text)
 
     # 
     if(cfrrescode == 200):
         for list in jsonArray:
             print (list.get("emotion").get("value"))
-            print(csrresponse.text)
+        print(csrresponse.text)
+        print(jsonObject2.get("return_object").get("label"))
 
-            data = list.get("emotion").get("value")
+        data = list.get("emotion").get("value")
+
+        
+           # print(adamsresponse.text)
 
         #@app.route('/')
         #def index():

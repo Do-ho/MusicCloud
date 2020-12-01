@@ -19,6 +19,7 @@ def hello():
 
 @app.route("/home")
 def home():
+    #return render_template("index.html")
     return render_template("index.html")
 
 
@@ -69,12 +70,21 @@ def testApi():
     #json 파싱 (adams)
     jsonObject2 = json.loads(adamsresponse.text)
 
+    # ShutterStock API
+    ShutterStockURL = "https://api.shutterstock.com/v2/audio/search?moods=uplifting"
+
+    ShutterStockheader = {
+        "Authorization": "Bearer *"
+    }
+    ShutterStockresponse = requests.get(ShutterStockURL, headers=ShutterStockheader)
+    ShutterStockrescode = ShutterStockresponse.status_code
     # 
     if(cfrrescode == 200):
         for list in jsonArray:
             print (list.get("emotion").get("value"))
         print(csrresponse.text)
         print(jsonObject2.get("return_object").get("label"))
+        print(ShutterStockresponse.text)
 
         data = list.get("emotion").get("value")
 

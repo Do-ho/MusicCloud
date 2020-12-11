@@ -6,7 +6,7 @@ class Testdb:
                                 port=3306, user='*', passwd='*',
                                 db='*', charset='utf8')
 
-    #passwd는 일단 비공개를 위해 가렸습니다.
+    #passwd는 일단 비공개를 위해 가렸습니다..
 
     def select_all(self):
         cursor = self.db.cursor()

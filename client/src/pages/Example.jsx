@@ -129,7 +129,7 @@ const Example = () => {
     const createData = (musicData) => {
         if(musicData === null) return null;
         let i = 0;
-        
+        const searchResultEmotion = musicData.emotion==="happy" ? "행복함" : musicData.emotion==="sad" ? "슬픔" : "평범함";
         const mydata = musicData.data.map((item)=> {
             i += 1;
             return <Data key={item.id}>
@@ -140,7 +140,7 @@ const Example = () => {
             </Data>
         });
         return <MusicContainer>
-            <ResultTitle>검색결과 : {musicData.emotion}</ResultTitle>
+            <ResultTitle>검색결과 : {searchResultEmotion}</ResultTitle>
             {mydata}
             </MusicContainer>;
     }

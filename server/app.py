@@ -25,9 +25,9 @@ def home():
     return render_template("index.html")
 
 # 음성인식을 통한 감정분석 기반 음악 추천
-@app.route("/testApi1", methods=['POST'])
+@app.route("/recomend/transfer/voice-to-music", methods=['POST'])
 @cross_origin()
-def testApi1():
+def voiceToMusic():
     ID = CSR_CLIENT_ID # 인증 정보의 Client ID
     Secret = CSR_SECRET # 인증 정보의 Client Secret
     Key = ADAMS_KEY # ADAMS API KEY
@@ -81,6 +81,8 @@ def testApi1():
         print(ShutterStockresponse.text)
 
         data = ShutterStockresponse.text
+        data = data[:-1]
+        data += ","+'"emotion":"'+emotion +'"}'
 
     else:
         print("Error : " + csrresponse.text)
@@ -88,9 +90,9 @@ def testApi1():
     return data
 
 # 텍스트를 통한 감정분석 기반 음악 추천
-@app.route("/testApi2", methods=['POST'])
+@app.route("/recomend/transfer/text-to-music", methods=['POST'])
 @cross_origin()
-def testApi2():
+def textToMusic():
 
     ID = CSR_CLIENT_ID # 인증 정보의 Client ID
     Secret = CSR_SECRET # 인증 정보의 Client Secret
@@ -131,6 +133,8 @@ def testApi2():
         print(ShutterStockresponse.text)
 
         data = ShutterStockresponse.text
+        data = data[:-1]
+        data += ","+'"emotion":"'+emotion +'"}'
 
     else:
         print("Error : " + ShutterStockresponse.text)
@@ -140,9 +144,9 @@ def testApi2():
 
 
 # 얼굴인식을 통한 감정분석 기반 음악 추천
-@app.route("/testApi3", methods=['POST'])
+@app.route("/recomend/transfer/face-to-music", methods=['POST'])
 @cross_origin()
-def testApi3():
+def faceToMusic():
 
     ID = CSR_CLIENT_ID # 인증 정보의 Client ID
     Secret = CSR_SECRET # 인증 정보의 Client Secret
@@ -195,6 +199,7 @@ def testApi3():
     ShutterStockrescode = ShutterStockresponse.status_code
     
     data = ShutterStockresponse.text
-    print(ShutterStockresponse.text)
+    data = data[:-1]
+    data += ","+'"emotion":"'+emotion +'"}'
 
     return data

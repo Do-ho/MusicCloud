@@ -62,10 +62,26 @@ const Doc = () => {
                     <Thead>
                         <Titem> Method </Titem>
                         <Titem> Request URI </Titem>
+                        <Titem> Header </Titem>   
+                        <Titem> Request </Titem>                        
                     </Thead>
                     <Tbody>
                         <Titem> POST </Titem>
-                        <Titem> <APIText>http://musiccloud.com/api/v1/recommand</APIText> </Titem>
+                        <Titem> <APIText>http://musiccloud.kro.kr:5000/recomend/transfer/text-to-music</APIText> </Titem>
+                        <Titem> Muitipart/form-data </Titem>
+                        <Titem> {"{ text : string }"} </Titem>
+                    </Tbody>
+                    <Tbody>
+                        <Titem> POST </Titem>
+                        <Titem> <APIText>http://musiccloud.kro.kr:5000/recomend/transfer/face-to-music</APIText> </Titem>
+                        <Titem> Muitipart/form-data </Titem>
+                        <Titem> {"{ file: FILE }"} </Titem>
+                    </Tbody>
+                    <Tbody>
+                        <Titem> POST </Titem>
+                        <Titem> <APIText>http://musiccloud.kro.kr:5000/recomend/transfer/voice-to-music</APIText> </Titem>
+                        <Titem> Muitipart/form-data </Titem>
+                        <Titem> {"{ file: FILE }"} </Titem>
                     </Tbody>
                 </Table>
             </SubContainer>

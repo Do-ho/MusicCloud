@@ -7,7 +7,7 @@ const StyledMainContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 `;
 
 const MainContainer = ({children}) => {

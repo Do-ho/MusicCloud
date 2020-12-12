@@ -140,7 +140,7 @@ const Example = () => {
             </Data>
         });
         return <MusicContainer>
-            <ResultTitle>검색결과</ResultTitle>
+            <ResultTitle>검색결과 : {musicData.emotion}</ResultTitle>
             {mydata}
             </MusicContainer>;
     }

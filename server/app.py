@@ -5,6 +5,11 @@ import requests
 from flask import request
 import os
 from dotenv import load_dotenv
+from flask_cors import CORS, cross_origin
+
+app = Flask(__name__)
+CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 load_dotenv()
 
 CSR_CLIENT_ID = os.getenv("CSR_CLIENT_ID")
@@ -21,6 +26,7 @@ def home():
 
 # 음성인식을 통한 감정분석 기반 음악 추천
 @app.route("/testApi1", methods=['POST'])
+@cross_origin()
 def testApi1():
     ID = CSR_CLIENT_ID # 인증 정보의 Client ID
     Secret = CSR_SECRET # 인증 정보의 Client Secret
@@ -83,6 +89,7 @@ def testApi1():
 
 # 텍스트를 통한 감정분석 기반 음악 추천
 @app.route("/testApi2", methods=['POST'])
+@cross_origin()
 def testApi2():
 
     ID = CSR_CLIENT_ID # 인증 정보의 Client ID
@@ -134,6 +141,7 @@ def testApi2():
 
 # 얼굴인식을 통한 감정분석 기반 음악 추천
 @app.route("/testApi3", methods=['POST'])
+@cross_origin()
 def testApi3():
 
     ID = CSR_CLIENT_ID # 인증 정보의 Client ID

@@ -2,25 +2,25 @@
 
 
 
-### :tipping_hand_man: Introduce
+## :tipping_hand_man: Introduce
 
    Music Cloud는 사용자의 감정을 텍스트, 음성, 영상을 통해 추출하고 해당 감정에 맞는 음악을 추천해주는 서비스입니다.
 
 
 
-### :busts_in_silhouette: User Scenario
+## :busts_in_silhouette: User Scenario
 
 ![image](https://user-images.githubusercontent.com/33643752/102004429-ddefeb00-3d53-11eb-9396-c637cf98ceef.png)
 
 
 
-### :eyes: API Logic
+## :eyes: API Logic
 
 ![image](https://user-images.githubusercontent.com/33643752/102004401-ab45f280-3d53-11eb-83e7-4cbf400fdba3.png)
 
 
 
-### :hammer: How to start?
+## :hammer: How to start?
 
 (1) Clone
 

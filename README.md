@@ -70,8 +70,19 @@ SHUTTERSTOCK_TOKEN=<SHUTTERSTOCK_TOKEN>
 
 
 
+## :house: 홈페이지 캡처 사진
+
+![image](https://user-images.githubusercontent.com/33643752/102977631-9d0f8780-4546-11eb-881a-0e8b385392a8.png)
+
+![image](https://user-images.githubusercontent.com/33643752/102977552-7cdfc880-4546-11eb-8711-452d7053a3c6.png)
+
+![image](https://user-images.githubusercontent.com/33643752/102977694-b31d4800-4546-11eb-9711-f0d6be17e426.png)
+
+![image](https://user-images.githubusercontent.com/33643752/102977750-ca5c3580-4546-11eb-801a-74434933592c.png)
+
 ## :family_man_boy_boy: Contributor
 
 - 이동욱
 - 김도호
 - 김의현
+
